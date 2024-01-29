@@ -3,7 +3,7 @@ import matplotlib as mpl
 from phytreeviz.treeviz import TreeViz
 from phytreeviz.utils import load_example_tree_file
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 
 __all__ = [
     "TreeViz",
