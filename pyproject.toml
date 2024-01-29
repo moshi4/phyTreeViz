@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "Simple phylogenetic tree visualization python package"
 authors = ["moshi4"]
 license = "MIT"
-repository = "https://github.com/moshi4/PhyTreePlot/"
+repository = "https://github.com/moshi4/phyTreeViz/"
 readme = "README.md"
 keywords = [
     "bioinformatics",
@@ -29,23 +29,30 @@ minversion = "6.0"
 addopts = "--cov=src --tb=line --cov-report=xml --cov-report=term"
 testpaths = ["tests"]
 
-# Lint Rules: https://beta.ruff.rs/docs/rules
 [tool.ruff]
-select = ["E", "F", "W", "I", "D", "B"]
-ignore = [
-    "D100",
-    "D101",
-    "D104",
-    "D105",
-    "D205",
-    "D400",
-    "D401",
-    "D403",
-    "D415",
-    "B905",
-]
 src = ["src", "tests"]
 line-length = 88
+
+# Lint Rules: https://docs.astral.sh/ruff/rules/
+[tool.ruff.lint]
+select = [
+    "F", # pyflakes
+    "E", # pycodestyle (Error)
+    "W", # pycodestyle (Warning)
+    "I", # isort
+    "D", # pydocstyle
+]
+ignore = [
+    "D100", # Missing docstring in public module
+    "D101", # Missing docstring in public class
+    "D104", # Missing docstring in public package
+    "D105", # Missing docstring in magic method
+    "D205", # 1 blank line required between summary line and description
+    "D400", # First line should end with a period
+    "D401", # First line should be in imperative mood
+    "D403", # First word of the first line should be properly capitalized
+    "D415", # First line should end with a period, question mark, or exclamation point
+]
 
 [tool.ruff.pydocstyle]
 convention = "numpy"
@@ -57,15 +64,17 @@ biopython = ">=1.7.9"
 numpy = ">=1.21.1"
 
 [tool.poetry.group.dev.dependencies]
-pytest = ">=7.2.1"
-black = ">=23.1.0"
-ruff = ">=0.0.264"
+ruff = ">=0.1.6"
+pytest = ">=7.1.2"
 pytest-cov = ">=4.0.0"
-ipykernel = ">=6.21.2"
+ipykernel = ">=6.13.0"
+
+[tool.poetry.group.docs.dependencies]
 mkdocs = ">=1.2"
 mkdocstrings = { extras = ["python"], version = ">=0.19.0" }
 mkdocs-jupyter = ">=0.21.0"
 mkdocs-material = ">=8.2"
+black = ">=22.10.0"
 
 [build-system]
 requires = ["poetry-core"]
