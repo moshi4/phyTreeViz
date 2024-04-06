@@ -4,6 +4,7 @@
 ![OS](https://img.shields.io/badge/OS-_Windows_|_Mac_|_Linux-steelblue)
 ![License](https://img.shields.io/badge/License-MIT-steelblue)
 [![Latest PyPI version](https://img.shields.io/pypi/v/phytreeviz.svg)](https://pypi.python.org/pypi/phytreeviz)
+[![conda-forge](https://img.shields.io/conda/vn/conda-forge/phytreeviz.svg?color=green)](https://anaconda.org/conda-forge/phytreeviz)
 
 ## Overview
 
@@ -20,6 +21,10 @@ Therefore, if you need complex tree annotations, I recommend using [ete](https:/
 **Install PyPI package:**
 
     pip install phytreeviz
+
+**Install conda-forge package:**
+
+    conda install -c conda-forge phytreeviz
 
 ## Examples
 
