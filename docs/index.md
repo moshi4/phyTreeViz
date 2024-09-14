@@ -16,7 +16,7 @@ Therefore, if you need complex tree annotations, I recommend using [ete](https:/
 
 ## Installation
 
-`Python 3.8 or later` is required for installation.
+`Python 3.9 or later` is required for installation.
 
 **Install PyPI package:**
 
