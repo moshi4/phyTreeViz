@@ -8,6 +8,11 @@
 
 ### Options
 
+    $ phytreeviz --help
+    usage: phytreeviz [options] -i tree.nwk -o tree_viz.png
+
+    Simple phylogenetic tree visualization CLI tool
+
     General Options:
       -i IN, --intree IN      Input phylogenetic tree file or text
       -o OUT, --outfile OUT   Output phylogenetic tree plot file [*.png|*.jpg|*.svg|*.pdf]

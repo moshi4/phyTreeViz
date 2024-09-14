@@ -62,6 +62,7 @@ def get_args() -> argparse.Namespace:
     desc = "Simple phylogenetic tree visualization CLI tool"
     parser = argparse.ArgumentParser(
         description=desc,
+        usage="phytreeviz [options] -i tree.nwk -o tree_viz.png",
         add_help=False,
         formatter_class=CustomHelpFormatter,
         epilog=f"Available Tree Format: {format_list}",
